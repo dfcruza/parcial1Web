@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import localeEnMessages from './locale/en.json';
 import localeEsMessages from './locale/es.json';
@@ -10,7 +9,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Container, Col, Row, Navbar } from 'react-bootstrap';
 import * as serviceWorker from './serviceWorker';
 import Formulario from './components/Form';
-import cafeLista from './components/cafeList';
+import CafeLista from './components/cafeList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,8 +22,8 @@ root.render(
       <img src="https://img.freepik.com/fotos-premium/banner-fondo-completo-tostado-granos-cafe_771335-18607.jpg?w=2000" style={{width: "1240px", height: "340px", marginLeft:"100px"}}/>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Formulario/>}/>
-          <Route path="/cafeList" element={<cafeLista />}/>
+          <Route path="/" element={<Formulario />}/>
+          <Route path="/cafes" element={<CafeLista />} />
         </Routes>
       </BrowserRouter>
       <footer style={{backgroundColor: "#343a40", color: "white", height: "50px", marginTop: "50px"}}>

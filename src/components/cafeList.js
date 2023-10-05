@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import Cafe from './cafe';
 
 
-function cafeLista () {
+function CafeLista () {
 
     const [cafes, setCafes] = useState([]);
 
@@ -73,4 +73,4 @@ function cafeLista () {
 
 }
 
-export default cafeLista;
+export default CafeLista;
