@@ -51,25 +51,23 @@ function Formulario() {
     };
 
     return (
-        <Container>
-            <Card style={{ width: "18rem", marginLeft: "100px", marginTop: "50px" }}>
+        <div>
+            <h4 style={{ marginLeft: "15%", marginTop: "10px" }}><FormattedMessage id="InicioSesion" /></h4>
+            <Card style={{ width: "900px", marginLeft: "15%", marginTop: "10px" }}>
                 <Form>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label><FormattedMessage id="email" /></Form.Label>
-                        <Form.Control type="email" placeholder="Enter email" value={formValues.email} onChange={handleEmailChange} />
+                    <Form.Group className="mb-6" controlId="formBasicEmail">
+                        <Form.Label><FormattedMessage id="email" /></Form.Label>    <Form.Control type="email" value={formValues.email} isInvalid={!validations.email} onChange={handleEmailChange} />
                         {validations.email === false && <Form.Text className="text-muted">
-                            <FormattedMessage id="emailError" />
+                            Email incorrecto
                         </Form.Text>}
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label><FormattedMessage id="password" /></Form.Label>
-                        <Form.Control type="password" placeholder="Password" value={formValues.password} onChange={handlePasswordChange} />
+                        <Form.Label><FormattedMessage id="password" /> </Form.Label>    <Form.Control type="password" value={formValues.password} isInvalid = {!validations.password} onChange={handlePasswordChange} />
                         {validations.password === false && <Form.Text className="text-muted">
-                            <FormattedMessage id="passwordError" />
+                            Contraseña incorrecta
                         </Form.Text>}
                     </Form.Group>
-                    {!validations.email && !validations.password &&<Form.Text className="text-muted">Correo o contraseña incorrectos.</Form.Text>}
                     <Container>
                         <Button variant="primary" type="button" onClick={handleClickSubmit}>
                             <FormattedMessage id="submit" />
@@ -80,7 +78,7 @@ function Formulario() {
                     </Container>
                 </Form>
             </Card>
-        </Container>
+        </div>
     );
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { FormattedMessage, FormattedDate } from "react-intl";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Cafe = (props) => {
 
@@ -37,12 +37,12 @@ const Cafe = (props) => {
             weekday="long"            
             />
             <br />
-            <img src={cafe.imagen} alt={cafe.nombre} width="100px" />
+            <img src={cafe.imagen} alt={cafe.nombre} style={{width: "116px", height: "150px", marginLeft: "20%"}} />
             <br />
             <FormattedMessage id="notas" />
             <br />
             <b>
-                <FormattedMessage id="altura" /> {cafe.altura}
+                <FormattedMessage id="altura" /> {cafe.altura+" "}
                 <FormattedMessage id="msnm" />
             </b>
         </Card>

@@ -34,10 +34,10 @@ function CafeLista () {
     };
 
     return (
-        <div>
+        <div className='row'>
             <div className='col'>
-                <Table striped bordered hover variant="dark" style={{marginLeft:"100px"}}>
-                    <thead>
+                <Table style={{marginLeft:"100px", width:"790px"}}>
+                    <thead style={{backgroundColor: "#333A40"}}>
                         <tr>
                             <th scope='col'>
                                 #
