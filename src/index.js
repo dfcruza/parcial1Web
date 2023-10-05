@@ -24,7 +24,7 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Formulario/>}/>
-          <Route path="/cafeList" element={<cafeLista></cafeLista>}/>
+          <Route path="/cafeList" element={<cafeLista />}/>
         </Routes>
       </BrowserRouter>
       <footer style={{backgroundColor: "#343a40", color: "white", height: "50px", marginTop: "50px"}}>
