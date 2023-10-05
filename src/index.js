@@ -4,7 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import localeEnMessages from './locale/en.json';
 import localeEsMessages from './locale/es.json';
-import { IntlProvider, FormattedMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Container, Col, Row, Navbar } from 'react-bootstrap';
 import * as serviceWorker from './serviceWorker';
